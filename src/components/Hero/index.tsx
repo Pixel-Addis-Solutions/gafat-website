@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative overflow-hidden bg-hero bg-no-repeat bg-cover bg-center pt-[120px] md:pt-[130px] lg:pt-[130px]"
+        className="h-screen relative overflow-hidden bg-hero bg-no-repeat bg-cover bg-center pt-[120px] md:pt-[130px] lg:pt-[130px]"
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-60"></div>
