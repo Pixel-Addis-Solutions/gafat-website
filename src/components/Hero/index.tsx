@@ -27,7 +27,7 @@ const Hero = () => {
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
                     <Link
-                      href="https://nextjstemplates.com/templates/play"
+                      href="/contact"
                       className="flex items-center gap-4 justify-center rounded-md bg-[#00796B] px-7 py-[14px] text-center text-base font-medium text-white shadow-xl transition duration-300 ease-in-out hover:bg-[#004D40]"
                     >
                       <svg
@@ -50,7 +50,7 @@ const Hero = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://github.com/nextjsTemplates/play-nextjs"
+                      href="/about"
                       target="_blank"
                       className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
                     >

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Features = () => {
   return (
-    <section className="pb-8 pt-8 lg:pb-0 lg:pt-8">
+    <section className="pb-8 pt-8 lg:pb-10 lg:pt-8">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
