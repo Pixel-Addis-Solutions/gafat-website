@@ -5,41 +5,50 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Sabo Masties",
+    name: "Dr. Mekdes A. – Addis Ababa",
     designation: "Founder @ Rolex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "As a hospital administrator, we rely on consistent and high-quality pharmaceutical supplies. This company has never let us down! Reliable service, fast delivery, and genuine products.",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Margin Gesmu",
+    name: " Bethel Pharmacy – Hawassa",
     designation: "Founder @ UI Hunter",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "We've been sourcing our medicines from them for over a year now. Their products are always certified, and their customer service is outstanding. Highly recommended!",
     image: "/images/testimonials/author-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "William Smith",
+    name: "Dr. Samuel G. – Bahir Dar",
     designation: "Founder @ Trorex",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Finding trusted pharmaceutical suppliers in Ethiopia can be challenging. But with this company, we have peace of mind knowing that every product is authentic and safe.",
     image: "/images/testimonials/author-03.png",
     star: 5,
   },
+  // {
+  //   id: 4,
+  //   name: "Lidya M. – Community Health Worker, Adama",
+  //   designation: "Founder @ Trorex",
+  //   content:
+  //     "Affordable pricing, timely deliveries, and excellent support. They genuinely care about improving healthcare access in Ethiopia.",
+  //   image: "/images/testimonials/author-03.png",
+  //   star: 5,
+  // },
 ];
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
+    <section className="bg-gray-1 py-8 dark:bg-dark-2 md:py-[40]">
       <div className="container px-4">
         <SectionTitle
-          subtitle="Testimonials"
+          subtitle="What Our Clients Say"
           title="What our Client Say"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Read firsthand experiences from our satisfied clients and see how our products and services have made a difference."
           width="640px"
           center
         />

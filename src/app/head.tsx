@@ -2,10 +2,10 @@ export default function Head() {
   return (
     <>
       <title>
-      Play Next.js - SaaS Starter Kit and Boilerplate for Next.js
+      Reliable Pharmaceutical Import & Supply | High-Quality Medicines & Healthcare
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="description" content="This SaaS Boilerplate and Starter Kit for Next.js is designed specifically for SaaS startups. It's a free resource complete with all the necessary integrations, pages, and components you require to build and launch a comprehensive SaaS website with robust features." />
+      <meta name="description" content="Partner with a trusted pharmaceutical import company providing high-quality, certified medicines and healthcare products to pharmacies, hospitals, and healthcare providers. Contact us today for reliable supply solutions." />
       <link rel="icon" href="/images/favicon.ico" />
     </>
   );

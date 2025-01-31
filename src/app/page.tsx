@@ -7,15 +7,17 @@ import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
+import News from "@/components/News";
+import Service from "@/components/Service";
 import Team from "@/components/Team";
+import TelegramCallToActionSection from "@/components/TelegramCallToAction";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Play Next.js - SaaS Starter Kit and Boilerplate for Next.js",
-  description: "Free Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.",
+  title: "Reliable Pharmaceutical Import & Supply | High-Quality Medicines & Healthcare",
+  description: "Partner with a trusted pharmaceutical import company providing high-quality, certified medicines and healthcare products to pharmacies, hospitals, and healthcare providers. Contact us today for reliable supply solutions.",
 };
 
 export default function Home() {
@@ -26,15 +28,13 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <About />
-      <CallToAction />
-      <Pricing />
-      <Testimonials />
-      <Faq />
-      <Team />
-      <HomeBlogSection posts={posts} />
-      <Contact />
+      <Service/>
       <Clients />
+      <Faq />
+      <Testimonials />
+      <News/>
+      <TelegramCallToActionSection/>
+      <Contact />
     </main>
   );
 }

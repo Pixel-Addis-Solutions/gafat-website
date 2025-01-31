@@ -1,102 +1,94 @@
-import Link from "next/link";
+"use client";
 
-const CallToAction = () => {
+import { useState } from "react";
+import { FaTelegramPlane, FaTiktok } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+export default function SocialMediaButtons() {
+  const [isHoveredTelegram, setIsHoveredTelegram] = useState(false);
+  const [isHoveredTikTok, setIsHoveredTikTok] = useState(false);
+
+  const openTelegram = () => {
+    window.open("https://t.me/YourTelegramCommunity", "_blank");
+  };
+
+  const openTikTok = () => {
+    window.open("https://www.tiktok.com/@YourTikTokProfile", "_blank");
+  };
+
   return (
-    <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
-      <div className="container mx-auto">
-        <div className="relative overflow-hidden">
-          <div className="-mx-4 flex flex-wrap items-stretch">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[570px] text-center">
-                <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>What Are You Looking For?</span>
-                  <span className="text-3xl font-normal md:text-[40px]">
-                    {" "}
-                    Get Started Now{" "}
-                  </span>
-                </h2>
-                <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
-                </p>
-                <Link
-                  href="/"
-                  className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
-                >
-                  Start using Play
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <span className="absolute left-0 top-0">
-          <svg
-            width="495"
-            height="470"
-            viewBox="0 0 495 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="55"
-              cy="442"
-              r="138"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="50"
-            />
-            <circle
-              cx="446"
-              r="39"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="20"
-            />
-            <path
-              d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
-              stroke="white"
-              strokeOpacity="0.08"
-              strokeWidth="12"
-            />
-          </svg>
-        </span>
-        <span className="absolute bottom-0 right-0">
-          <svg
-            width="493"
-            height="470"
-            viewBox="0 0 493 470"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="462"
-              cy="5"
-              r="138"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="50"
-            />
-            <circle
-              cx="49"
-              cy="470"
-              r="39"
-              stroke="white"
-              strokeOpacity="0.04"
-              strokeWidth="20"
-            />
-            <path
-              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
-              stroke="white"
-              strokeOpacity="0.06"
-              strokeWidth="13"
-            />
-          </svg>
-        </span>
-      </div>
-    </section>
-  );
-};
+    <div className="fixed bottom-8 right-8 z-[999] flex items-center justify-end space-x-4">
+      {/* Telegram Button */}
+      <motion.div
+        onClick={openTelegram}
+        onMouseEnter={() => setIsHoveredTelegram(true)}
+        onMouseLeave={() => setIsHoveredTelegram(false)}
+        whileTap={{ scale: 0.95 }}
+        className="flex items-center rounded-full bg-blue-500 text-white shadow-lg transition-all duration-300 hover:bg-blue-600"
+        style={{
+          width: isHoveredTelegram ? "190px" : "40px", // Expand width on hover
+          height: "40px",
+          padding: isHoveredTelegram ? "0 16px" : "0 12px",
+          justifyContent: isHoveredTelegram ? "space-between" : "center", // Ensures proper spacing
+        }}
+      >
+        <motion.div
+          className="flex items-center justify-center w-10 h-10"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FaTelegramPlane size={22} />
+        </motion.div>
 
-export default CallToAction;
+        {isHoveredTelegram && (
+          <motion.span
+            className="whitespace-nowrap text-sm font-medium ml-3"
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "auto" }}
+            exit={{ opacity: 0, width: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            Join Our Telegram
+          </motion.span>
+        )}
+      </motion.div>
+
+      {/* TikTok Button */}
+      <motion.div
+        onClick={openTikTok}
+        onMouseEnter={() => setIsHoveredTikTok(true)}
+        onMouseLeave={() => setIsHoveredTikTok(false)}
+        whileTap={{ scale: 0.95 }}
+        className="flex items-center rounded-full bg-black text-white shadow-lg transition-all duration-300 hover:bg-gray-800"
+        style={{
+          width: isHoveredTikTok ? "190px" : "40px", // Expand width on hover
+          height: "40px",
+          padding: isHoveredTikTok ? "0 16px" : "0 12px",
+          justifyContent: isHoveredTikTok ? "space-between" : "center", // Ensures proper spacing
+        }}
+      >
+        <motion.div
+          className="flex items-center justify-center w-10 h-10"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FaTiktok size={22} />
+        </motion.div>
+
+        {isHoveredTikTok && (
+          <motion.span
+            className="whitespace-nowrap text-sm font-medium ml-3"
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: "auto" }}
+            exit={{ opacity: 0, width: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            Follow Us on TikTok
+          </motion.span>
+        )}
+      </motion.div>
+    </div>
+  );
+}
