@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-white py-14">
+    <section className="bg-white pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
         <p className="text-lg text-gray-600 mt-2">We deliver quality and excellence in pharmaceutical imports and distribution.</p>

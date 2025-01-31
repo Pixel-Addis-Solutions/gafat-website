@@ -11,13 +11,14 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-4/12 xl:w-3/12">
             <div className="mb-10">
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
-                <Image
+                {/* <Image
                   src="/images/logo/logo.png"
                   alt="logo"
                   width={100}
                   height={30}
                   className="max-w-full"
-                />
+                /> */}
+                <p className="text-2xl font-semibold text-white">EAST GAFAT TRADING</p>
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
               We are a trusted pharmaceutical import company dedicated to delivering high-quality medical products and healthcare solutions with integrity and excellence.
@@ -84,6 +85,13 @@ const Footer = () => {
                 <Link href="#">
                   <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
                     Service
+                  </h4>
+                </Link>
+              </li>
+              <li>
+                <Link href="#">
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
+                    Contact
                   </h4>
                 </Link>
               </li>

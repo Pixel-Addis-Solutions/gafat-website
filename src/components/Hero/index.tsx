@@ -28,7 +28,7 @@ const Hero = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="flex items-center gap-4 justify-center rounded-md bg-[#00796B] px-7 py-[14px] text-center text-base font-medium text-white shadow-xl transition duration-300 ease-in-out hover:bg-[#004D40]"
+                      className="flex items-center gap-4 justify-center rounded-md bg-primary px-7 py-[14px] text-center text-base font-medium text-white shadow-xl transition duration-300 ease-in-out hover:bg-[#004D40]"
                     >
                       <svg
                         width="24"

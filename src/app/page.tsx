@@ -1,8 +1,7 @@
 import About from "@/components/About";
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
-import ScrollUp from "@/components/Common/ScrollUp";
+import Clients from "@/components/Clients";;
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -25,14 +24,13 @@ export default function Home() {
 
   return (
     <main>
-      <ScrollUp />
       <Hero />
       <Features />
       <Service/>
       {/* <Clients /> */}
-      <Faq />
+      {/* <Faq /> */}
       <Testimonials />
-      <News/>
+      {/* <News/> */}
       <TelegramCallToActionSection/>
       <Contact />
     </main>

@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import ToasterContext from "./api/contex/ToasetContex";
+import ScrollUp from "@/components/Common/ScrollUp"
 
 export default function RootLayout({
   children,
@@ -25,6 +26,7 @@ export default function RootLayout({
               defaultTheme="light"
             >
               <ToasterContext />
+              <ScrollUp />
               <Header />
               {children}
               <Footer />

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900">Get in Touch</h2>
