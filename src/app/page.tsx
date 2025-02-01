@@ -20,9 +20,7 @@ export default function Home() {
       <Features />
       <Service/>
       <Clients />
-      {/* <Faq /> */}
       <Testimonials />
-      {/* <News/> */}
       <TelegramCallToActionSection/>
       <Contact />
     </main>

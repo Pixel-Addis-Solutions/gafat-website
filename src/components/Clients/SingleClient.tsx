@@ -1,23 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Client } from "@/types/client";
+import { Partner } from "@/types/partner";
 
-const SingleClient = ({ client }: { client: Client }) => {
-  const { title, link, logo, logoWhite } = client;
+const SingleClient = ({ client }: { client: Partner }) => {
+  const { name, link, image } = client;
   return (
     <div className="ud-single-logo mb-5 mr-10 max-w-[140px]">
       <Link href={link} target="_blank" rel="nofollow noopner">
         <Image
-          src={logo}
-          alt={title}
+          src={`http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000${image}`}
+          alt={name}
           className="dark:hidden"
-          width={140}
-          height={40}
-        />
-        <Image
-          src={logoWhite}
-          alt={title}
-          className="hidden dark:block"
           width={140}
           height={40}
         />

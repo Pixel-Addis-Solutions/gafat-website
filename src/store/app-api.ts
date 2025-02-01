@@ -1,3 +1,5 @@
+import { Partner } from "@/types/partner";
+import { Service } from "@/types/service";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const appApi = createApi({
@@ -7,7 +9,24 @@ export const appApi = createApi({
     getClients: builder.query({
       query: () => "/clients", // Update this endpoint as needed
     }),
+    getServices: builder.query<Service[], void>({
+      query: () => ({
+        url: "/api/services",
+        method: "GET",
+      })
+    }),
+    getPartners: builder.query<Partner[], void>({
+      query: () => ({
+        url: "/api/partners",
+        method: "GET",
+      })
+    })
+
   }),
 });
 
-export const { useGetClientsQuery } = appApi;
+export const { 
+  useGetClientsQuery,
+  useGetServicesQuery,
+  useGetPartnersQuery 
+} = appApi;
