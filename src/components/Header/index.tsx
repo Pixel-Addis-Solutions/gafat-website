@@ -1,15 +1,12 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import menuData from "./menuData";
 
 const Header = () => {
-  const { data: session } = useSession();
 
   const pathUrl = usePathname();
   // Navbar toggle
@@ -32,9 +29,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`ud-header left-0 top-4 z-40 flex w-full items-center shadow-nav fixed z-[999]`}
+        className={`ud-header left-0 top-0 lg:top-4 z-40 flex w-full items-center shadow-nav fixed z-[999]`}
       >
-        <div className="container bg-white rounded-lg border shadow">
+        <div className="w-full lg:container bg-white lg:rounded-lg border shadow">
           <div className="relative -mx-4 flex items-center justify-between lg:px-8">
             <div className="w-60 max-w-full px-4">
               <Link

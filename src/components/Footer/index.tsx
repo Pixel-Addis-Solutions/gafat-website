@@ -10,14 +10,15 @@ const Footer = () => {
           {/* Logo and Social Section */}
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-4/12 xl:w-3/12">
             <div className="mb-10">
-              <Link href="/" className="mb-6 inline-block max-w-[160px]">
-                <Image
+              <Link href="/" className="mb-6 inline-block">
+                {/* <Image
                   src="/images/logo/logo.png"
                   alt="logo"
                   width={100}
                   height={30}
                   className="max-w-full"
-                />
+                /> */}
+                <p className="text-2xl font-semibold text-white">EAST GAFAT TRADING</p>
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
               We are a trusted pharmaceutical import company dedicated to delivering high-quality medical products and healthcare solutions with integrity and excellence.
@@ -67,23 +68,30 @@ const Footer = () => {
             <h4 className="mb-4 text-lg font-medium text-white">Quick Links</h4>
             <ul className="flex flex-col gap-4">
               <li>
-                <Link href="#">
+                <Link href="/">
                   <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
                     Home
                   </h4>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="/about">
                   <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
                     About Us
                   </h4>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="/service">
                   <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
                     Service
+                  </h4>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
+                    Contact
                   </h4>
                 </Link>
               </li>
@@ -107,7 +115,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="border-t border-white border-opacity-40 py-8">
+      <div className="border-t border-white border-opacity-40 py-8 mt-6 lg:mt-0">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-between text-center md:flex-nowrap md:text-left">
             {/* Policies */}

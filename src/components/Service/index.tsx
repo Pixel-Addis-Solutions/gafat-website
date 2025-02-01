@@ -3,57 +3,53 @@ import { motion } from "framer-motion";
 
 const Service = () => {
   return (
-    <section className="py-20 lg:py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 bg-black text-white">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        {/* Title Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10 leading-tight">
+          <h2 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#B8860B]">
             Our Services
           </h2>
-          <p className="text-lg text-center text-gray-600 mb-16 lg:w-2/3 mx-auto font-light">
-            Providing exceptional, reliable, and fully compliant pharmaceutical services, tailored for healthcare institutions and professionals.
+          <p className="text-base text-gray-400 max-w-lg mx-auto mt-3">
+            Premium pharmaceutical solutions, ensuring excellence in healthcare distribution and compliance.
           </p>
         </motion.div>
 
+        {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Service Item 1 */}
-          <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <div className="text-primary text-7xl">
-              📦
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Pharmaceutical Imports</h3>
-            <p className="text-gray-600 opacity-80 text-base">
-              Sourcing high-quality pharmaceutical products globally, ensuring access to top-tier healthcare.
+          {/* Service Card 1 */}
+          <div className="p-6 border border-gray-700 rounded-lg bg-black/20 transition-all duration-300 hover:bg-white/10">
+            <div className="text-5xl text-[#FFD700] mb-4">📦</div>
+            <h3 className="text-xl font-medium">Pharmaceutical Imports</h3>
+            <p className="text-gray-400 mt-1 text-sm">
+              Sourcing world-class pharmaceutical products for superior healthcare.
             </p>
           </div>
 
-          {/* Service Item 2 */}
-          <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <div className="text-primary text-7xl">
-              🏥
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Wholesale Distribution</h3>
-            <p className="text-gray-600 opacity-80 text-base">
-              Delivering pharmaceutical products to hospitals and healthcare institutions with reliability and timeliness.
+          {/* Service Card 2 */}
+          <div className="p-6 border border-gray-700 rounded-lg bg-black/20 transition-all duration-300 hover:bg-white/10">
+            <div className="text-5xl text-[#FFD700] mb-4">🏥</div>
+            <h3 className="text-xl font-medium">Wholesale Distribution</h3>
+            <p className="text-gray-400 mt-1 text-sm">
+              Efficient delivery of pharmaceutical products to hospitals and institutions.
             </p>
           </div>
 
-          {/* Service Item 3 */}
-          <div className="flex flex-col items-center justify-center space-y-6 text-center">
-            <div className="text-primary text-7xl">
-              🔬
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Regulatory Compliance</h3>
-            <p className="text-gray-600 opacity-80 text-base">
-              Ensuring that all products comply with the highest international standards for the safety of patients and professionals.
+          {/* Service Card 3 */}
+          <div className="p-6 border border-gray-700 rounded-lg bg-black/20 transition-all duration-300 hover:bg-white/10">
+            <div className="text-5xl text-[#FFD700] mb-4">🔬</div>
+            <h3 className="text-xl font-medium">Regulatory Compliance</h3>
+            <p className="text-gray-400 mt-1 text-sm">
+              Ensuring adherence to global pharmaceutical safety standards.
             </p>
           </div>
         </motion.div>

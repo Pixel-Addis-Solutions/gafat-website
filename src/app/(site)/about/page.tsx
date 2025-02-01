@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Clients from "@/components/Clients";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <main>
-      <Breadcrumb pageName="About Us Page" />
       <About />
+      <Clients/>
     </main>
   );
 };

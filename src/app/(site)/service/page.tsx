@@ -2,22 +2,22 @@ import { Package, ShieldCheck, Truck, Star } from "lucide-react";
 
 const services = [
   {
-    icon: <Package className="w-10 h-10 text-blue-600" />,
+    icon: <Package className="w-10 h-10 text-primary" />,
     title: "Pharmaceutical Import",
     description: "We provide high-quality pharmaceutical products from trusted global suppliers.",
   },
   {
-    icon: <ShieldCheck className="w-10 h-10 text-blue-600" />,
+    icon: <ShieldCheck className="w-10 h-10 text-primary" />,
     title: "Quality Assurance",
     description: "Ensuring all our products meet international safety and quality standards.",
   },
   {
-    icon: <Truck className="w-10 h-10 text-blue-600" />,
+    icon: <Truck className="w-10 h-10 text-primary" />,
     title: "Efficient Distribution",
     description: "Fast and reliable delivery to pharmacies, hospitals, and healthcare providers.",
   },
   {
-    icon: <Star className="w-10 h-10 text-blue-600" />,
+    icon: <Star className="w-10 h-10 text-primary" />,
     title: "Regulatory Compliance",
     description: "We handle all regulatory approvals to ensure seamless product importation.",
   },
@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-white py-14">
+    <section className="bg-white pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
         <p className="text-lg text-gray-600 mt-2">We deliver quality and excellence in pharmaceutical imports and distribution.</p>
