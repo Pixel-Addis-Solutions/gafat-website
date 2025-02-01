@@ -41,8 +41,9 @@ const Faq = () => {
         <div className="mx-auto mt-[40px] flex flex-wrap lg:mt-10 items-center">
           <div className="mx-auto w-full px-4 lg:w-1/2 flex flex-col">
             {
-              faqs.map(faq => (
+              faqs.map((faq, index) => (
                 <SingleFaq
+                 key={index}
                   question={faq.question}
                   answer={faq.answer}
                 />
