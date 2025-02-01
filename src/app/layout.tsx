@@ -6,6 +6,8 @@ import { ThemeProvider } from "next-themes";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import ScrollUp from "@/components/Common/ScrollUp"
+import { Provider } from "react-redux";
+import { store } from "@/store/app-store";
 
 export default function RootLayout({
   children,
@@ -22,10 +24,12 @@ export default function RootLayout({
               enableSystem={false}
               defaultTheme="light"
             >
-              <ScrollUp />
-              <Header />
-              {children}
-              <Footer />
+              <Provider store={store}>
+                <ScrollUp />
+                <Header />
+                {children}
+                <Footer />
+              </Provider>
             </ThemeProvider>
       </body>
     </html>
