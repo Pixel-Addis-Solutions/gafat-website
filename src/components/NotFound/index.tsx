@@ -19,7 +19,7 @@ const NotFound = () => {
                 src="/images/404-dark.svg"
                 alt="image"
                 fill
-                className="mx-auto hidden max-w-full dark:block"
+                className="mx-auto hidden max-w-full text-primary"
               />
             </div>
           </div>

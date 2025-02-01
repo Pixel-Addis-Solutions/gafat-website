@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Clients from "@/components/Clients";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
@@ -12,6 +13,7 @@ const AboutPage = () => {
   return (
     <main>
       <About />
+      <Clients/>
     </main>
   );
 };

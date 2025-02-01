@@ -6,7 +6,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-semibold text-gold">About Us</h1>
+          <h1 className="text-4xl font-medium">About Us</h1>
           <p className="text-lg mt-4 max-w-2xl mx-auto">
             Delivering premium healthcare solutions with integrity, innovation, and excellence.
           </p>
@@ -34,26 +34,19 @@ const About = () => {
 
         {/* Commitment Section */}
         <div className="mt-20">
-          <h2 className="text-4xl font-bold text-center text-gold mb-10">Our Commitment</h2>
+          <h2 className="text-3xl font-medium text-center mb-10">Our Commitment</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Our Mission", text: "To enhance healthcare accessibility by offering innovative, high-quality pharmaceutical products while maintaining the highest safety standards." },
               { title: "Our Vision", text: "To be Ethiopia’s most trusted pharmaceutical importer, ensuring safe and affordable medication for all." },
               { title: "Our Core Values", text: "Integrity, Quality, Innovation, and Customer-Centric Excellence." },
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-gray-900 rounded-xl shadow-lg border border-gray-700 text-center">
-                <h3 className="text-xl font-semibold text-gold mb-3">{item.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{item.text}</p>
+              <div key={index} className="p-6 bg-gray-50 rounded-xl shadow-lg border text-center">
+                <h3 className="text-xl font-semibold text-gray-800 mt-4">{item.title}</h3>
+                <p className="text-gray-600 mt-2 text-sm">{item.text}</p>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Contact Button */}
-        <div className="text-center mt-16">
-          <a href="/contact" className="bg-gold text-black px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-yellow-500 transition duration-300">
-            Contact Us
-          </a>
         </div>
       </div>
     </section>
