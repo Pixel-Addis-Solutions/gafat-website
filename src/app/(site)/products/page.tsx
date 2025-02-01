@@ -134,7 +134,7 @@ const Products = () => {
           {categories.map((category) => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-lg transition duration-300 ${selectedCategory === category ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"}`}
+              className={`px-4 py-2 rounded-lg transition duration-300 ${selectedCategory === category ? "bg-primary text-white" : "bg-gray-200 text-gray-800"}`}
               onClick={() => {
                 setSelectedCategory(category);
                 setCurrentPage(1); // Reset to first page when category changes
