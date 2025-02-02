@@ -8,6 +8,7 @@ const SingleClient = ({ client }: { client: Partner }) => {
     <div className="ud-single-logo mb-5 mr-10 max-w-[140px]">
       <Link href={link} target="_blank" rel="nofollow noopner">
         <img
+      
           src={`http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000${image}`}
           alt={name}
           width={140}

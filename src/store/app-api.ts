@@ -20,13 +20,25 @@ export const appApi = createApi({
         url: "/api/partners",
         method: "GET",
       })
+    }),
+    getCategory: builder.query<any[], void>({
+      query: () => ({
+        url: "/api/categories",
+        method: "GET",
+      })
+    }),
+    getProducts: builder.query<any[], void>({
+      query: () => ({
+        url: "/api/products",
+        method: "GET",
+      })
     })
-
   }),
 });
 
 export const { 
   useGetClientsQuery,
   useGetServicesQuery,
-  useGetPartnersQuery 
+  useGetPartnersQuery ,
+  useGetCategoryQuery,useGetProductsQuery
 } = appApi;
