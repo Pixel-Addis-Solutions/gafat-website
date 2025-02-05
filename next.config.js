@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'ec2-16-171-239-43.eu-north-1.compute.amazonaws.com',
+        protocol: 'https',
+        hostname: 'api.alenafrica.org',
         port: '9000',
         pathname: '/**',
       },
     ],
   },
 };
-
 module.exports = nextConfig;

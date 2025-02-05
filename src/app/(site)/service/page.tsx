@@ -1,8 +1,39 @@
 'use client'
-import { useGetServicesQuery } from "@/store/app-api";
+import { Building, Factory, Globe, Hammer, Leaf, Package, Pickaxe, ShieldCheck, Star, Truck } from "lucide-react";
 
 const Services = () => {
-  const { data: services = []} = useGetServicesQuery();
+  const services = [
+    {
+      icon: <Pickaxe className="w-10 h-10 text-primary" />,
+      title: "Mining",
+      description: "Responsible extraction and supply of essential minerals and resources.",
+    },
+    {
+      icon: <Leaf className="w-10 h-10 text-primary" />, 
+      title: "Agriculture",
+      description: "Sustainable sourcing and distribution of agricultural products to global markets.",
+    },
+    {
+      icon: <Globe className="w-10 h-10 text-primary" />,
+      title: "Export",
+      description: "Global export of high-quality products across various industries.",
+    },
+    {
+      icon: <Package className="w-10 h-10 text-primary" />,
+      title: "Medical Supply",
+      description: "We provide high-quality medical products and equipment from trusted global suppliers.",
+    },
+    {
+      icon: <Factory className="w-10 h-10 text-primary" />,
+      title: "Manufacturing & Textile",
+      description: "Innovative manufacturing solutions, including textile production for various industries.",
+    },
+    {
+      icon: <Hammer className="w-10 h-10 text-primary" />,
+      title: "Construction Materials",
+      description: "Supplying high-quality marble, granite, paint, and other construction essentials.",
+    },
+  ];
 
   return (
     <section className="bg-white pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
@@ -10,10 +41,10 @@ const Services = () => {
         <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
         <p className="text-lg text-gray-600 mt-2">We deliver quality and excellence in pharmaceutical imports and distribution.</p>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-              <img src={service.image} className="flex justify-center"></img>
+              <div className="flex justify-center">{service.icon}</div>
               <h3 className="text-xl font-semibold text-gray-800 mt-4">{service.title}</h3>
               <p className="text-gray-600 mt-2 text-sm">{service.description}</p>
             </div>

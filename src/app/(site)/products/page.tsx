@@ -3,7 +3,7 @@ import { useGetCategoryQuery, useGetProductsQuery } from "@/store/app-api";
 import { useState } from "react";
 
 const PRODUCTS_PER_PAGE = 8;
-const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000";
+const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "https://api.alenafrica.org";
 
 interface Subcategory {
   id: number;

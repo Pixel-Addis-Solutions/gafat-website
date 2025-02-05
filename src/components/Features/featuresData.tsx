@@ -10,10 +10,9 @@ const featuresData: Feature[] = [
         <line x1="12" y1="17" x2="25" y2="17" stroke="white" stroke-width="2"/>
         <line x1="12" y1="22" x2="25" y2="22" stroke="white" stroke-width="2"/>
       </svg>
-
     ),
-    title: "Prescription Medications",
-    paragraph: "Certified drugs for various conditions, available in bulk for pharmacies and healthcare providers.",
+    title: "Pharmaceutical & Healthcare Equipment (Import)",
+    paragraph: "Importing advanced medical devices and pharmaceuticals to improve healthcare accessibility and patient care.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -25,10 +24,9 @@ const featuresData: Feature[] = [
         <circle cx="14" cy="18.5" r="2" fill="white"/>
         <circle cx="23" cy="18.5" r="2" fill="white"/>
       </svg>
-
     ),
-    title: "Over-the-Counter Drugs",
-    paragraph: "OTC medications, including pain relievers, cold remedies, and digestive aids for daily healthcare.",
+    title: "Manufacturing, Textile & Supply Chain (Import & Export)",
+    paragraph: "Importing essential raw materials and exporting high-quality manufactured goods to optimize global trade networks.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -40,10 +38,9 @@ const featuresData: Feature[] = [
         <line x1="18.5" y1="13" x2="18.5" y2="23" stroke="white" stroke-width="2"/>
         <line x1="13" y1="18.5" x2="23" y2="18.5" stroke="white" stroke-width="2"/>
       </svg>
-
     ),
-    title: "Medical Supplies",
-    paragraph: "Essential supplies such as syringes, bandages, gloves, and diagnostic tools for healthcare facilities.",
+    title: "Mining & Natural Resource Extraction (Export)",
+    paragraph: "Exporting valuable minerals and raw materials to global markets while maintaining responsible extraction practices.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -55,12 +52,12 @@ const featuresData: Feature[] = [
         <line x1="15" y1="12" x2="22" y2="12" stroke="white" stroke-width="2"/>
         <rect x="10" y="12" width="17" height="18" rx="3" stroke="white" stroke-width="2"/>
       </svg>
-
     ),
-    title: "Vaccines & Specialty Drugs",
-    paragraph: "Vaccines and specialty medications for preventive and advanced medical care, ensuring better health.",
+    title: "Agriculture Export",
+    paragraph: "Exporting premium agricultural products, supporting sustainable farming, and promoting global food security.",
     btn: "Learn More",
     btnLink: "/#",
   },
 ];
+
 export default featuresData;

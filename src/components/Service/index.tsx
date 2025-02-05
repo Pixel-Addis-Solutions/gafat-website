@@ -23,11 +23,7 @@ const services = [
     title: "Medical Supply",
     description: "We provide high-quality medical products and equipment from trusted global suppliers.",
   },
-  {
-    icon: <ShieldCheck className="w-10 h-10 text-primary" />,
-    title: "Quality Assurance",
-    description: "Ensuring all our products meet international safety and quality standards.",
-  },
+  
 
   {
     icon: <Factory className="w-10 h-10 text-primary" />,
@@ -60,7 +56,7 @@ const Service = () => {
             Our Services
           </h2>
           <p className="text-base text-gray-400 max-w-lg mx-auto mt-3">
-            Premium pharmaceutical solutions, ensuring excellence in healthcare distribution and compliance.
+          Premium solutions across pharmaceuticals, healthcare, manufacturing, agriculture, and more, ensuring excellence in distribution, sustainability, and industry compliance.
           </p>
         </motion.div>
 

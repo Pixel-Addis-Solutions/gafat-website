@@ -18,7 +18,7 @@ const Footer = () => {
                   height={30}
                   className="max-w-full"
                 /> */}
-                <p className="text-2xl font-semibold text-white">e- GAFAT TRADING</p>
+                <p className="text-2xl font-semibold text-white">East GAFAT TRADING</p>
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
      

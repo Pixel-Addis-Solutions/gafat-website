@@ -46,9 +46,10 @@ const ContactPage = () => {
 
         {/* Embedded Map */}
         <div className="rounded-2xl overflow-hidden shadow-xl">
+        
           <iframe
             className="w-full h-72 md:h-80 rounded-2xl"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.844971095957!2d38.75776087423612!3d9.030026091080883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f61dfe97bb%3A0x38a924db5e6a6891!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1700000000000!5m2!1sen!2set"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.7705242191273!2d38.78641738029596!3d8.993251368032624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850070bdd3ed%3A0x41e19890a166badc!2sSelam%20City%20Mall%20%231%20%7C%20Bole!5e0!3m2!1sen!2set!4v1738784392660!5m2!1sen!2set"
             allowFullScreen={true}
             loading="lazy"
           ></iframe>

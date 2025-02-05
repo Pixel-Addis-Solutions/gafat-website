@@ -8,7 +8,7 @@ const About = () => {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-medium">About Us</h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg">
-            Group is a global leader in providing sustainable, high-quality
+          East GAFAT is a global leader in providing sustainable, high-quality
             products and services across industries, committed to innovation and
             trusted partnerships.
           </p>
@@ -18,7 +18,7 @@ const About = () => {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <Image
-              src="/images/hero/back.png"
+              src="/images/hero/who.jpg"
               alt="About Us"
               width={600}
               height={400}
@@ -28,7 +28,7 @@ const About = () => {
           <div>
             <h2 className="text-gold mb-4 text-2xl font-medium">Who We Are</h2>
             <p className="mb-6 leading-relaxed">
-              e- GAFAT TRADING is a dynamic and innovative company committed to
+            East GAFAT  is a dynamic and innovative company committed to
               providing top-quality products and services across a variety of
               industries. From mining to medical supplies and construction
               materials, we pride ourselves on offering sustainable solutions

@@ -9,9 +9,9 @@ const Features = () => {
     <section className="pb-8 pt-8 lg:pb-10 lg:pt-8">
       <div className="container">
         <div>
-          <p className="text-3xl font-semibold text-primary text-center">Our Pharmaceutical Products</p>
+          <p className="text-3xl font-semibold text-primary text-center">Our Key Industries</p>
           <p className="text-center text-gray-600 mt-2 lg:w-2/3 mx-auto">
-            Offering a broad range of pharmaceutical products sourced from trusted manufacturers, adhering to international safety and quality standards.
+            We specialize in a wide range of Industries including pharmaceutical products, manufacturing, textile, agriculture, mining, and more. Our solutions are designed to optimize global trade and enhance sustainability across various industries.
           </p>
         </div>
         <div
