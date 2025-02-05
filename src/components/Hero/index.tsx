@@ -43,10 +43,11 @@ const Hero = () => {
               <div className="container relative z-10 flex h-full items-center justify-center text-center">
                 <div className="max-w-[800px]">
                   <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-5xl">
-                    Your Trusted Partner in Pharmaceutical Import & Wholesale Distribution
+                  Your Trusted Partner in Pharmaceutical, Mining, Agriculture, Manufacturing & Textile Distribution
                   </h1>
                   <p className="mx-auto mb-9 max-w-[700px] text-lg font-light text-white sm:text-xl">
-                    Delivering high-quality medications and healthcare products to pharmacies, hospitals, and healthcare providers with reliability and excellence.
+                  Delivering high-quality products and solutions across pharmaceuticals, mining, agriculture, manufacturing, and textiles with reliability and excellence.
+                  
                   </p>
                   <div className="flex justify-center gap-5">
                     <Link

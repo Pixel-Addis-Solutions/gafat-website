@@ -18,10 +18,11 @@ const Footer = () => {
                   height={30}
                   className="max-w-full"
                 /> */}
-                <p className="text-2xl font-semibold text-white">EAST GAFAT TRADING</p>
+                <p className="text-2xl font-semibold text-white">e- GAFAT TRADING</p>
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
-              We are a trusted pharmaceutical import company dedicated to delivering high-quality medical products and healthcare solutions with integrity and excellence.
+     
+We are a trusted global trading company committed to delivering high-quality products and sustainable solutions across industries, ensuring reliability, innovation, and excellence.
               </p>
               <div className="flex items-center gap-4">
                 <a

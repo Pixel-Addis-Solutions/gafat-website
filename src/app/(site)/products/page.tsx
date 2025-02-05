@@ -3,23 +3,51 @@ import { useGetCategoryQuery, useGetProductsQuery } from "@/store/app-api";
 import { useState } from "react";
 
 const PRODUCTS_PER_PAGE = 8;
+const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000";
+
+interface Subcategory {
+  id: number;
+  name: string;
+  description: string;
+}
+
+interface Category {
+  id: number;
+  name: string;
+  description: string;
+  subcategory: Subcategory[];
+}
+
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  subcategory: Subcategory;
+}
 
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const [selectedSubcategory, setSelectedSubcategory] = useState<Subcategory | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null); // Track selected product for modal
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   // Fetch categories and products from the API
   const { data: categories = [] } = useGetCategoryQuery();
   const { data: products = [], isLoading, isError } = useGetProductsQuery();
 
   // Add "All" option to the categories
-  const allCategories = [{ id: "all", name: "All" }, ...categories];
+  const allCategories = [{ id: 0, name: "All", description: "All", subcategory: [] }, ...categories];
 
-  // Filter products based on the selected category
-  const filteredProducts = selectedCategory === "All"
-    ? products
-    : products.filter((product) => product.category.name === selectedCategory);
+  // Filter products based on the selected category and subcategory
+  const filteredProducts = selectedCategory
+    ? selectedSubcategory
+      ? products.filter((product) => product.subcategory.id === selectedSubcategory.id)
+      : products.filter((product) =>
+          selectedCategory.subcategory.some((sub) => sub.id === product.subcategory.id)
+        )
+    : products;
 
   // Pagination logic
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
@@ -28,23 +56,20 @@ const Products = () => {
     currentPage * PRODUCTS_PER_PAGE
   );
 
-  const handlePageChange = (newPage:any) => {
+  const handlePageChange = (newPage: number) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
     }
   };
 
-  // Truncate long text
-  const truncateText = (text:any, maxLength:any) => {
+  const truncateText = (text: string, maxLength: number) => {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
-  // Open modal with product details
-  const openModal = (product:any) => {
+  const openModal = (product: Product) => {
     setSelectedProduct(product);
   };
 
-  // Close modal
   const closeModal = () => {
     setSelectedProduct(null);
   };
@@ -56,16 +81,20 @@ const Products = () => {
     <section className="bg-white py-14">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900">Our Products</h2>
-        <p className="text-lg text-gray-600 mt-2">Explore our diverse range of pharmaceutical and medical products.</p>
+        <p className="text-lg text-gray-600 mt-2">Explore our diverse range of products.</p>
 
+        {/* Category Selection */}
         <div className="mt-6 flex justify-center space-x-4">
           {allCategories.map((category) => (
             <button
               key={category.id}
-              className={`px-4 py-2 rounded-lg transition duration-300 ${selectedCategory === category.name ? "bg-primary text-white" : "bg-gray-200 text-gray-800"}`}
+              className={`px-4 py-2 rounded-lg transition duration-300 ${
+                selectedCategory?.id === category.id ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+              }`}
               onClick={() => {
-                setSelectedCategory(category.name);
-                setCurrentPage(1); // Reset to first page when category changes
+                setSelectedCategory(category.id === 0 ? null : category);
+                setSelectedSubcategory(null);
+                setCurrentPage(1);
               }}
             >
               {category.name}
@@ -73,28 +102,58 @@ const Products = () => {
           ))}
         </div>
 
+        {/* Subcategory Selection */}
+        {selectedCategory && selectedCategory.subcategory.length > 0 && (
+          <div className="mt-4 flex justify-center space-x-4">
+            <button
+              className={`px-4 py-2 rounded-lg transition duration-300 ${
+                !selectedSubcategory ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+              }`}
+              onClick={() => {
+                setSelectedSubcategory(null);
+                setCurrentPage(1);
+              }}
+            >
+              All
+            </button>
+            {selectedCategory.subcategory.map((subcategory) => (
+              <button
+                key={subcategory.id}
+                className={`px-4 py-2 rounded-lg transition duration-300 ${
+                  selectedSubcategory?.id === subcategory.id ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+                }`}
+                onClick={() => {
+                  setSelectedSubcategory(subcategory);
+                  setCurrentPage(1);
+                }}
+              >
+                {subcategory.name}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Product Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {displayedProducts.map((product, index) => (
+          {displayedProducts.map((product) => (
             <div
-              key={index}
+              key={product.id}
               className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer"
               onClick={() => openModal(product)}
             >
               <div className="flex justify-center">
                 <img
-                  src={`http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000${product.image}`}
+                  src={`${BASE_URL}${product.image}`}
                   alt={product.name}
-                  className="w-40 h-40 object-cover rounded-md" // Larger image size
+                  className="w-45 h-45 object-cover rounded-md"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
-              <p className="text-gray-600 mt-2 text-sm">
-                {truncateText(product.description, 50)} {/* Truncate long text */}
-              </p>
             </div>
           ))}
         </div>
 
+        {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-8 flex justify-center space-x-4">
             <button
@@ -131,14 +190,12 @@ const Products = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src={`http://ec2-16-171-239-43.eu-north-1.compute.amazonaws.com:9000${selectedProduct.image}`}
+                src={`${BASE_URL}${selectedProduct.image}`}
                 alt={selectedProduct.name}
                 className="w-64 h-64 object-cover rounded-md"
               />
             </div>
-            <p className="text-gray-600 mt-4">{selectedProduct.description}</p>
-            <p className="text-gray-800 font-semibold mt-4">Price: ${selectedProduct.price}</p>
-            <p className="text-gray-600 mt-2">Category: {selectedProduct.category.name}</p>
+            <p className="text-gray-600 mt-2">Subcategory: {selectedProduct.subcategory.name}</p>
           </div>
         </div>
       )}

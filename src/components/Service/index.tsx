@@ -1,29 +1,49 @@
 'use client'
 import { motion } from "framer-motion";
 import { useGetServicesQuery } from "@/store/app-api";
-import { Package, ShieldCheck, Star, Truck } from "lucide-react";
+import { Building, Factory, Globe, Hammer, Leaf, Package, Pickaxe, ShieldCheck, Star, Truck } from "lucide-react";
 const services = [
   {
+    icon: <Pickaxe className="w-10 h-10 text-primary" />,
+    title: "Mining",
+    description: "Responsible extraction and supply of essential minerals and resources.",
+  },
+  {
+    icon: <Leaf className="w-10 h-10 text-primary" />, 
+    title: "Agriculture",
+    description: "Sustainable sourcing and distribution of agricultural products to global markets.",
+  },
+  {
+    icon: <Globe className="w-10 h-10 text-primary" />,
+    title: "Export",
+    description: "Global export of high-quality products across various industries.",
+  },
+  {
     icon: <Package className="w-10 h-10 text-primary" />,
-    title: "Pharmaceutical Import",
-    description: "We provide high-quality pharmaceutical products from trusted global suppliers.",
+    title: "Medical Supply",
+    description: "We provide high-quality medical products and equipment from trusted global suppliers.",
   },
   {
     icon: <ShieldCheck className="w-10 h-10 text-primary" />,
     title: "Quality Assurance",
     description: "Ensuring all our products meet international safety and quality standards.",
   },
+
   {
-    icon: <Truck className="w-10 h-10 text-primary" />,
-    title: "Efficient Distribution",
-    description: "Fast and reliable delivery to pharmacies, hospitals, and healthcare providers.",
+    icon: <Factory className="w-10 h-10 text-primary" />,
+    title: "Manufacturing & Textile",
+    description: "Innovative manufacturing solutions, including textile production for various industries.",
   },
-  // {
-  //   icon: <Star className="w-10 h-10 text-primary" />,
-  //   title: "Regulatory Compliance",
-  //   description: "We handle all regulatory approvals to ensure seamless product importation.",
-  // },
+ 
+  {
+    icon: <Hammer className="w-10 h-10 text-primary" />,
+    title: "Construction Materials",
+    description: "Supplying high-quality marble, granite, paint, and other construction essentials.",
+  },
+ 
 ];
+
+
 
 const Service = () => {
   // const { data: services = []} = useGetServicesQuery();
