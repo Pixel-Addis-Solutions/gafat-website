@@ -9,7 +9,7 @@ const TelegramCallToActionSection = () => {
           Be the first to know about our latest updates, news, offers, and much more. Connect with like-minded people and stay informed.
         </p>
         <a 
-          href="https://t.me/@eastgafat_group" 
+          href="https://t.me/eastgafat_group" 
           className="bg-white text-primary py-3 px-8 rounded-full font-semibold shadow-md hover:bg-gray-100 transition"
         >
           Join Now

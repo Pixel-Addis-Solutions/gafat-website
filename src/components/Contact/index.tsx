@@ -24,6 +24,9 @@ const Contact = () => {
             <a href="tel:+251911576379" className="text-primary font-medium hover:underline">
             +251 911 576 379
             </a>
+            <a href="tel:+251911576379" className="text-primary font-medium hover:underline">
+            +251 116 672 700
+            </a>
           </p>
         </div>
 
@@ -31,7 +34,7 @@ const Contact = () => {
           <Send className="text-primary mx-auto mb-3" size={40} />
           <h3 className="text-xl font-semibold text-gray-900">Telegram</h3>
           <p className="text-gray-600 mt-2">
-            <a href="https://t.me/YourTelegramUsername" className="text-primary font-medium hover:underline">
+            <a href="https://t.me/eastgafat_group"className="text-primary font-medium hover:underline">
               Message Us
             </a>
           </p>

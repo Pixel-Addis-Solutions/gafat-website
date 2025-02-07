@@ -8,9 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reliable Pharmaceutical Import & Supply | High-Quality Medicines & Healthcare",
-  description: "Partner with a trusted pharmaceutical import company providing high-quality, certified medicines and healthcare products to pharmacies, hospitals, and healthcare providers. Contact us today for reliable supply solutions.",
-};
+  title: "East Gafat",
+  description: "Trusted global trading company committed to delivering high-quality products and sustainable solutions across industries, ensuring reliability, innovation, and excellence."}
 
 export default function Home() {
 

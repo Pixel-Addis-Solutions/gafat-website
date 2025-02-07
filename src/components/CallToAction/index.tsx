@@ -9,7 +9,7 @@ export default function SocialMediaButtons() {
   const [isHoveredTikTok, setIsHoveredTikTok] = useState(false);
 
   const openTelegram = () => {
-    window.open("https://t.me/YourTelegramCommunity", "_blank");
+    window.open("https://t.me/eastgafat_group", "_blank");
   };
 
   const openTikTok = () => {
@@ -55,7 +55,7 @@ export default function SocialMediaButtons() {
       </motion.div>
 
       {/* TikTok Button */}
-      <motion.div
+      {/* <motion.div
         onClick={openTikTok}
         onMouseEnter={() => setIsHoveredTikTok(true)}
         onMouseLeave={() => setIsHoveredTikTok(false)}
@@ -81,7 +81,7 @@ export default function SocialMediaButtons() {
             Follow Us on TikTok
           </motion.span>
         )}
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

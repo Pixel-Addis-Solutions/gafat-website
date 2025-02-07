@@ -29,7 +29,7 @@ const ContactPage = () => {
             <div className="flex items-center space-x-4">
               <Send className="w-6 h-6 text-primary" />
               <a
-                href="https://t.me/YourTelegramHandle"
+                href="https://t.me/eastgafat_group"
                 target="_blank"
                 className="text-primary text-lg font-medium hover:underline"
               >

@@ -9,7 +9,7 @@ export default function SocialButtons() {
   const [isHoveredTiktok, setIsHoveredTiktok] = useState(false);
 
   const openTelegram = () => {
-    window.open("https://t.me/YourTelegramCommunity", "_blank");
+    window.open("https://t.me/eastgafat_group" , "_blank");
   };
 
   

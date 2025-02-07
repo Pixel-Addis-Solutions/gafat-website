@@ -28,7 +28,7 @@ const About = () => {
           <div>
             <h2 className="text-gold mb-4 text-2xl font-medium">Who We Are</h2>
             <p className="mb-6 leading-relaxed">
-            East GAFAT  is a dynamic and innovative company committed to
+              East gafat is a dynamic and innovative company committed to
               providing top-quality products and services across a variety of
               industries. From mining to medical supplies and construction
               materials, we pride ourselves on offering sustainable solutions
