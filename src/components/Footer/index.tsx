@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTelegramPlane, FaTiktok, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTelegramPlane, FaTiktok, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,54 +11,21 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 md:w-1/3 lg:w-4/12 xl:w-3/12">
             <div className="mb-10">
               <Link href="/" className="mb-6 inline-block">
-                {/* <Image
-                  src="/images/logo/logo.png"
-                  alt="logo"
-                  width={100}
-                  height={30}
-                  className="max-w-full"
-                /> */}
-                <p className="text-2xl font-semibold text-white">East GAFAT TRADING</p>
+                <p className="text-2xl font-semibold text-white">East Gafat Engineering Group</p>
               </Link>
               <p className="mb-8 max-w-[270px] text-base text-white">
-     
-We are a trusted global trading company committed to delivering high-quality products and sustainable solutions across industries, ensuring reliability, innovation, and excellence.
+                We are a trusted global trading company committed to delivering high-quality products and sustainable solutions across industries, ensuring reliability, innovation, and excellence.
               </p>
               <div className="flex items-center gap-4">
-                <a
-                  aria-label="social link"
-                  href="/#"
-                  className="text-white hover:text-white text-xl"
-                >
+                <a aria-label="Facebook" href="#" className="text-white hover:text-white text-xl">
                   <FaFacebook />
                 </a>
-                <a
-                  aria-label="social link"
-                  href="/#"
-                  className="text-white hover:text-white text-xl"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  aria-label="social link"
-                  href="/#"
-                  className="text-white hover:text-white text-xl"
-                >
-                  <FaTwitter />
-                </a>
-                {/* <a
-                  aria-label="social link"
-                  href="/#"
-                  className="text-white hover:text-white text-xl"
-                >
-                  <FaTiktok />
-                </a> */}
-                <a
-                  aria-label="social link"
-                  href="/#"
-                  className="text-white hover:text-white text-xl"
-                >
+               
+                <a aria-label="Telegram" href="#" className="text-white hover:text-white text-xl">
                   <FaTelegramPlane />
+                </a>
+                <a aria-label="WhatsApp" href="https://wa.me/+251911576379" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white text-xl">
+                  <FaWhatsapp />
                 </a>
               </div>
             </div>
@@ -70,48 +37,29 @@ We are a trusted global trading company committed to delivering high-quality pro
             <ul className="flex flex-col gap-4">
               <li>
                 <Link href="/">
-                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
-                    Home
-                  </h4>
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">Home</h4>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
-                    About Us
-                  </h4>
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">About Us</h4>
                 </Link>
               </li>
               <li>
                 <Link href="/service">
-                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
-                    Service
-                  </h4>
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">Service</h4>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">
-                    Contact
-                  </h4>
+                  <h4 className="text-lg font-medium text-white hover:text-white cursor-pointer">Contact</h4>
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Community Section */}
-          <div className="w-full md:w-1/3 lg:w-4/12">
-            <h4 className="mb-4 text-lg font-medium text-white">Community</h4>
-            <p className="text-white mb-4">
-              Join our Telegram community.
-            </p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <button className="px-4 py-2 bg-white hover:bg-primary hover:text-white hover:border hover:border-2 hover:border-white rounded-lg text-primary flex items-center space-x-2">
-                <FaTelegramPlane className="text-lg" />
-                <span>Join Our Telegram</span>
-              </button>
-            </a>
-          </div>
+          
         </div>
       </div>
 

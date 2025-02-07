@@ -1,5 +1,6 @@
 import { MapPin, Phone, Send } from "lucide-react";
 import { Metadata } from "next";
+import { FaMobileAlt, FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Contact Us | Premium Support",
@@ -18,14 +19,24 @@ const ContactPage = () => {
         {/* Contact Information */}
         <div className="p-8 rounded-2xl shadow-xl">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h3>
-          <p className="text-gray-600 mb-6">Feel free to contact us via Telegram or phone.</p>
-
+        
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
-              <Phone className="w-6 h-6 text-primary" />
-              <span className="text-gray-700 text-lg font-medium">+251 911 576 379</span>
+            <FaMobileAlt  className="w-6 h-6 text-primary" />
+              <span className="text-gray-700 text-lg font-medium">
+              <a href="tel:+251911576379" className="text-primary font-medium hover:underline">
+              +251 911 576 379
+            </a>
+              </span>
             </div>
-
+            <div className="flex items-center space-x-4">
+            <Phone className="w-6 h-6 text-primary" />
+              <span className="text-gray-700 text-lg font-medium">
+              <a href="tel:+251 116 672 700" className="text-primary font-medium hover:underline">
+              +251 116 672 700
+            </a>
+              </span>
+            </div>
             <div className="flex items-center space-x-4">
               <Send className="w-6 h-6 text-primary" />
               <a
@@ -33,10 +44,19 @@ const ContactPage = () => {
                 target="_blank"
                 className="text-primary text-lg font-medium hover:underline"
               >
-                Join Our Telegram Community
+                 Telegram 
               </a>
             </div>
-
+            <div className="flex items-center space-x-4">
+              <FaWhatsapp className="w-6 h-6 text-primary" />
+              <a
+                href="https://wa.me/+251911576379"
+                target="_blank"
+                className="text-primary text-lg font-medium hover:underline"
+              >
+                WhatsApp
+              </a>
+            </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-primary" />
               <span className="text-gray-700 text-lg font-medium">Addis Ababa, Ethiopia</span>

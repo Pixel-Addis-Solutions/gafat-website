@@ -8,7 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "East Gafat",
+  title: "East Gafat Engineering Group",
   description: "Trusted global trading company committed to delivering high-quality products and sustainable solutions across industries, ensuring reliability, innovation, and excellence."}
 
 export default function Home() {
@@ -19,8 +19,8 @@ export default function Home() {
       <Features />
       <Service/>
       <Clients />
-      <Testimonials />
-      <TelegramCallToActionSection/>
+      {/* <Testimonials /> */}
+      {/* <TelegramCallToActionSection/> */}
       <Contact />
     </main>
   );

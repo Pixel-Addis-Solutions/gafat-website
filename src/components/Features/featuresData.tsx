@@ -1,6 +1,6 @@
 import { Feature } from "@/types/feature";
 
-const featuresData: Feature[] = [
+const featuresData = [
   {
     id: 1,
     icon: (
@@ -11,10 +11,10 @@ const featuresData: Feature[] = [
         <line x1="12" y1="22" x2="25" y2="22" stroke="white" stroke-width="2"/>
       </svg>
     ),
-    title: "Pharmaceutical & Healthcare Equipment (Import)",
-    paragraph: "Importing advanced medical devices and pharmaceuticals to improve healthcare accessibility and patient care.",
+    title: "Pharmaceutical",
+    paragraph: "Advanced medical devices and pharmaceuticals to improve healthcare accessibility and patient care.",
     btn: "Learn More",
-    btnLink: "/#",
+    btnLink: "/products"
   },
   {
     id: 2,
@@ -25,10 +25,10 @@ const featuresData: Feature[] = [
         <circle cx="23" cy="18.5" r="2" fill="white"/>
       </svg>
     ),
-    title: "Manufacturing, Textile & Supply Chain (Import & Export)",
-    paragraph: "Importing essential raw materials and exporting high-quality manufactured goods to optimize global trade networks.",
+    title: "Manufacturing",
+    paragraph: "Essential raw materials and high-quality manufactured goods to optimize global trade networks.",
     btn: "Learn More",
-    btnLink: "/#",
+    btnLink: "/products",
   },
   {
     id: 3,
@@ -39,10 +39,10 @@ const featuresData: Feature[] = [
         <line x1="13" y1="18.5" x2="23" y2="18.5" stroke="white" stroke-width="2"/>
       </svg>
     ),
-    title: "Mining & Natural Resource Extraction (Export)",
-    paragraph: "Exporting valuable minerals and raw materials to global markets while maintaining responsible extraction practices.",
+    title: "Mining",
+    paragraph: "Valuable minerals and raw materials supplied to global markets while maintaining responsible extraction practices.",
     btn: "Learn More",
-    btnLink: "/#",
+    btnLink: "/products",
   },
   {
     id: 4,
@@ -53,11 +53,13 @@ const featuresData: Feature[] = [
         <rect x="10" y="12" width="17" height="18" rx="3" stroke="white" stroke-width="2"/>
       </svg>
     ),
-    title: "Agriculture Export",
-    paragraph: "Exporting premium agricultural products, supporting sustainable farming, and promoting global food security.",
+    title: "Agriculture",
+    paragraph: "Premium agricultural products, supporting sustainable farming, and promoting global food security.",
     btn: "Learn More",
-    btnLink: "/#",
+    btnLink: "/products",
   },
 ];
+
+
 
 export default featuresData;
