@@ -21,8 +21,8 @@ const Contact = () => {
           <Phone className="text-primary mx-auto mb-3" size={40} />
           <h3 className="text-xl font-semibold text-gray-900">Call Us</h3>
           <p className="text-gray-600 mt-2">
-            <a href="tel:+251912345678" className="text-primary font-medium hover:underline">
-              +251 912 345 678
+            <a href="tel:+251911576379" className="text-primary font-medium hover:underline">
+            +251 911 576 379
             </a>
           </p>
         </div>

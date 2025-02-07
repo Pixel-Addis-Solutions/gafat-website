@@ -10,30 +10,31 @@ import Link from "next/link";
 const items = [
   { 
     image: "/images/hero/5.jpg", 
-    title: "Mining & Natural Resource Extraction", 
-    subtitle: "Exporting high-quality raw materials and minerals to global markets while ensuring sustainable resource management." 
+    title: "Mining", 
+    subtitle: "Providing high-quality raw materials and minerals to global markets while ensuring responsible resource management." 
   },
   { 
     image: "/images/hero/1.jpg", 
-    title: "Pharmaceutical & Healthcare Equipments", 
-    subtitle: "Importing advanced medical equipment and pharmaceuticals to enhance healthcare services and improve patient outcomes." 
+    title: "Medical Supply", 
+    subtitle: "Delivering advanced medical technology and essential supplies to enhance healthcare services and improve patient care." 
   },
   { 
     image: "/images/hero/4.jpg", 
-    title: "Agriculture Export", 
-    subtitle: "Exporting premium agricultural products to international markets, promoting food security, and supporting local farmers." 
+    title: "Farming", 
+    subtitle: "Bringing premium farm produce to the world, supporting sustainable farming practices, and strengthening food systems." 
   },
   { 
     image: "/images/hero/3.jpg", 
-    title: "Manufacturing, Textile & Global Supply Chain", 
-    subtitle: "Importing essential raw materials and exporting finished products, ensuring a seamless global trade network and optimized supply chain." 
+    title: "Manufacturing", 
+    subtitle: "Sourcing essential materials and distributing high-quality products to ensure a seamless and efficient trade network." 
   },
   { 
     image: "/images/hero/2.jpg", 
-    title: "Export Business", 
-    subtitle: "Facilitating the export of a wide range of products, ensuring smooth logistics, and expanding market access to international buyers." 
+    title: "Export Trade", 
+    subtitle: "Connecting quality products with international demand, optimizing logistics, and fostering strong economic partnerships." 
   }
 ];
+
 
 const Hero = () => {
   return (
@@ -65,11 +66,11 @@ const Hero = () => {
                   <h1 className="mb-4 text-3xl font-bold leading-snug text-white sm:text-4xl lg:text-5xl">
                     {item.title}
                   </h1>
-                  <h2 className="mb-6 text-xl font-medium text-gray-300 sm:text-xl">
+                  {/* <h2 className="mb-6 text-xl font-medium text-gray-300 sm:text-xl">
                     {item.subtitle}
-                  </h2>
+                  </h2> */}
                   
-                  <div className="flex justify-center gap-5">
+                  {/* <div className="flex justify-center gap-5">
                     <Link
                       href="/contact"
                       className="flex items-center gap-4 rounded-md bg-primary px-7 py-[14px] text-base font-medium text-white shadow-xl transition hover:bg-white hover:text-dark"
@@ -82,7 +83,7 @@ const Hero = () => {
                     >
                       Learn More
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -46,13 +46,13 @@ We are a trusted global trading company committed to delivering high-quality pro
                 >
                   <FaTwitter />
                 </a>
-                <a
+                {/* <a
                   aria-label="social link"
                   href="/#"
                   className="text-white hover:text-white text-xl"
                 >
                   <FaTiktok />
-                </a>
+                </a> */}
                 <a
                   aria-label="social link"
                   href="/#"

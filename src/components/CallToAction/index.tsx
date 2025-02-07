@@ -68,14 +68,7 @@ export default function SocialMediaButtons() {
           justifyContent: isHoveredTikTok ? "space-between" : "center", // Ensures proper spacing
         }}
       >
-        <motion.div
-          className="flex items-center justify-center w-10 h-10"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <FaTiktok size={22} />
-        </motion.div>
+       
 
         {isHoveredTikTok && (
           <motion.span

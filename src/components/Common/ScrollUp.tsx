@@ -12,10 +12,7 @@ export default function SocialButtons() {
     window.open("https://t.me/YourTelegramCommunity", "_blank");
   };
 
-  const openTikTok = () => {
-    window.open("https://www.tiktok.com/@YourTikTokPage", "_blank");
-  };
-
+  
   return (
     <div className="fixed bottom-8 right-8 z-[999] flex flex-col items-end space-y-3 lg:flex-row lg:gap-3">
       {/* Telegram Button */}
@@ -48,35 +45,7 @@ export default function SocialButtons() {
         )}
       </motion.div>
 
-      {/* TikTok Button */}
-      <motion.div
-        onClick={openTikTok}
-        onMouseEnter={() => setIsHoveredTiktok(true)}
-        onMouseLeave={() => setIsHoveredTiktok(false)}
-        whileTap={{ scale: 0.95 }}
-        className="flex items-center rounded-full bg-black text-white shadow-lg transition-all duration-300 hover:bg-gray-800 cursor-pointer"
-        style={{
-          width: isHoveredTiktok ? "170px" : "40px",
-          height: "40px",
-          padding: isHoveredTiktok ? "0 16px" : "0 12px",
-          justifyContent: isHoveredTiktok ? "space-between" : "center",
-        }}
-      >
-        <motion.div className="flex items-center justify-center w-10 h-10">
-          <FaTiktok size={22} />
-        </motion.div>
-        {isHoveredTiktok && (
-          <motion.span
-            className="whitespace-nowrap text-sm font-medium ml-3"
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "auto" }}
-            exit={{ opacity: 0, width: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            Follow on TikTok
-          </motion.span>
-        )}
-      </motion.div>
+      
     </div>
   );
 }

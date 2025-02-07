@@ -120,7 +120,9 @@ const Products = () => {
               <button
                 key={subcategory.id}
                 className={`px-4 py-2 rounded-lg transition duration-300 ${
-                  selectedSubcategory?.id === subcategory.id ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
+                  selectedSubcategory?.id === subcategory.id
+                    ? "bg-yellow-500 text-white"
+                    : "bg-yellow-100 text-gray-800"
                 }`}
                 onClick={() => {
                   setSelectedSubcategory(subcategory);
@@ -145,7 +147,7 @@ const Products = () => {
                 <img
                   src={`${BASE_URL}${product.image}`}
                   alt={product.name}
-                  className="w-45 h-45 object-cover rounded-md"
+                   className="w-full h-48 object-cover rounded-md"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
