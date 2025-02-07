@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "404 - Page Not Found | East Gafat Engineering Group",
     description: "Oops! The page you're looking for doesn't exist. Return to the homepage or explore other services.",
-    image: "/images/logo/logo.png",  // Ensure this image is correct and exists
+    images: ["/images/logo/logo.png"],  // Ensure this image is correct and exists
   },
 };
 

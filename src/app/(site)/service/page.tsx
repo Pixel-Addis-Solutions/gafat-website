@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "East Gafat Engineering Group | Global Trading & Sustainable Solutions",
     description: "Trusted global trading company delivering high-quality products and sustainable solutions.",
-    image: "/images/logo/logo.png",  // Update with the path to a suitable image
+    images: ["/images/logo/logo.png"],  // Update with the path to a suitable image
   },
 };
 
