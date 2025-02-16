@@ -1,6 +1,6 @@
 "use client";
 import { useGetCategoryQuery, useGetProductsQuery } from "@/store/app-api";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const PRODUCTS_PER_PAGE = 8;
 const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "https://api.alenafrica.org";
@@ -33,23 +33,19 @@ const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-  // Fetch categories and products from the API
   const { data: categories = [] } = useGetCategoryQuery();
   const { data: products = [], isLoading, isError } = useGetProductsQuery();
 
-  // Add "All" option to the categories
-  const allCategories = [{ id: 0, name: "All", description: "All", subcategory: [] }, ...categories];
+  useEffect(() => {
+    if (selectedCategory && selectedCategory.subcategory.length > 0) {
+      setSelectedSubcategory(selectedCategory.subcategory[0]);
+    }
+  }, [selectedCategory]);
 
-  // Filter products based on the selected category and subcategory
-  const filteredProducts = selectedCategory
-    ? selectedSubcategory
-      ? products.filter((product) => product.subcategory.id === selectedSubcategory.id)
-      : products.filter((product) =>
-          selectedCategory.subcategory.some((sub) => sub.id === product.subcategory.id)
-        )
+  const filteredProducts = selectedSubcategory
+    ? products.filter((product) => product.subcategory.id === selectedSubcategory.id)
     : products;
 
-  // Pagination logic
   const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   const displayedProducts = filteredProducts.slice(
     (currentPage - 1) * PRODUCTS_PER_PAGE,
@@ -60,10 +56,6 @@ const Products = () => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
     }
-  };
-
-  const truncateText = (text: string, maxLength: number) => {
-    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
   const openModal = (product: Product) => {
@@ -83,17 +75,15 @@ const Products = () => {
         <h2 className="text-3xl font-bold text-gray-900">Our Products</h2>
         <p className="text-lg text-gray-600 mt-2">Explore our diverse range of products.</p>
 
-        {/* Category Selection */}
         <div className="mt-6 flex justify-center space-x-4">
-          {allCategories.map((category) => (
+          {categories.map((category) => (
             <button
               key={category.id}
               className={`px-4 py-2 rounded-lg transition duration-300 ${
                 selectedCategory?.id === category.id ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
               }`}
               onClick={() => {
-                setSelectedCategory(category.id === 0 ? null : category);
-                setSelectedSubcategory(null);
+                setSelectedCategory(category);
                 setCurrentPage(1);
               }}
             >
@@ -102,21 +92,9 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Subcategory Selection */}
         {selectedCategory && selectedCategory.subcategory.length > 0 && (
           <div className="mt-4 flex justify-center space-x-4">
-            <button
-              className={`px-4 py-2 rounded-lg transition duration-300 ${
-                !selectedSubcategory ? "bg-primary text-white" : "bg-gray-200 text-gray-800"
-              }`}
-              onClick={() => {
-                setSelectedSubcategory(null);
-                setCurrentPage(1);
-              }}
-            >
-              All
-            </button>
-            {selectedCategory.subcategory.map((subcategory) => (
+            {selectedCategory.subcategory.map((subcategory, index) => (
               <button
                 key={subcategory.id}
                 className={`px-4 py-2 rounded-lg transition duration-300 ${
@@ -135,7 +113,6 @@ const Products = () => {
           </div>
         )}
 
-        {/* Product Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {displayedProducts.map((product) => (
             <div
@@ -147,7 +124,7 @@ const Products = () => {
                 <img
                   src={`${BASE_URL}${product.image}`}
                   alt={product.name}
-                   className="w-full h-48 object-cover rounded-md"
+                  className="w-full h-48 object-cover rounded-md"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
@@ -155,7 +132,6 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-8 flex justify-center space-x-4">
             <button
@@ -177,7 +153,6 @@ const Products = () => {
         )}
       </div>
 
-      {/* Modal for displaying full product information */}
       {selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">

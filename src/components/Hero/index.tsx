@@ -30,7 +30,7 @@ const items = [
   },
   { 
     image: "/images/hero/2.jpg", 
-    title: "Export Trade", 
+    title: "Export & Import Trade", 
     subtitle: "Connecting quality products with international demand, optimizing logistics, and fostering strong economic partnerships." 
   }
 ];

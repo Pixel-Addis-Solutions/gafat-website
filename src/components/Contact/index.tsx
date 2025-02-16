@@ -18,7 +18,7 @@ const Contact = () => {
           <p className="text-gray-600 mt-2">Addis Ababa, Ethiopia</p>
         </div>
 
-        <div className="bg-gray-100 p-6 rounded-xl text-center shadow-md">
+        {/* <div className="bg-gray-100 p-6 rounded-xl text-center shadow-md">
           <FaMobileAlt className="text-primary mx-auto mb-3" size={40} />
           <h3 className="text-xl font-semibold text-gray-900">Call Us</h3>
           <p className="text-gray-600 mt-2">
@@ -27,7 +27,7 @@ const Contact = () => {
             </a>
            
           </p>
-        </div>
+        </div> */}
 
         
         <div className="bg-gray-100 p-6 rounded-xl text-center shadow-md">

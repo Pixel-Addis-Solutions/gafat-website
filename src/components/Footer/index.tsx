@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
             {/* Attribution */}
             <div className="w-full md:text-right">
-              <p className="text-base text-white">
+              {/* <p className="text-base text-white">
                 Designed and Developed by{" "}
                 <a
                   href="https://www.pixeladdis.com/"
@@ -87,7 +87,7 @@ const Footer = () => {
                 >
                   Pixel Addis Solutions
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

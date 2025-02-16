@@ -6,40 +6,34 @@ const Services = () => {
     {
       icon: <Pickaxe className="w-10 h-10 text-primary" />,
       title: "Mining",
-      description: "Responsible extraction and supply of essential minerals and resources.",
+      description: "Exploring resources, modeling, mine planning, and exploiting mineral resources.",
     },
     {
       icon: <Leaf className="w-10 h-10 text-primary" />, 
       title: "Agriculture",
-      description: "Sustainable sourcing and distribution of agricultural products to global markets.",
+      description: "Producing high-quality agricultural products for local and international markets.",
     },
     {
       icon: <Globe className="w-10 h-10 text-primary" />,
-      title: "Export",
-      description: "Global export of high-quality products across various industries.",
+      title: "Export and Import Trade",
+      description: "Trading minerals, agricultural products, medical items, and spare parts.",
     },
     {
       icon: <Package className="w-10 h-10 text-primary" />,
       title: "Medical Supply",
-      description: "We provide high-quality medical products and equipment from trusted global suppliers.",
+      description: "Providing high-quality medical products and equipment.",
     },
     {
       icon: <Factory className="w-10 h-10 text-primary" />,
-      title: "Manufacturing & Textile",
-      description: "Innovative manufacturing solutions, including textile production for various industries.",
-    },
-    {
-      icon: <Hammer className="w-10 h-10 text-primary" />,
-      title: "Construction Materials",
-      description: "Supplying high-quality marble, granite, paint, and other construction essentials.",
+      title: "Manufacturing",
+      description: "Producing clothing, building materials, and paint.",
     },
   ];
-
   return (
     <section className="bg-white pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
-        <p className="text-lg text-gray-600 mt-2">We deliver quality and excellence in pharmaceutical imports and distribution.</p>
+        {/* <p className="text-lg text-gray-600 mt-2">We deliver quality and excellence in pharmaceutical imports and distribution.</p> */}
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (

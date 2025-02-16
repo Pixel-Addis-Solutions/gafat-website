@@ -21,14 +21,14 @@ const ContactPage = () => {
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h3>
         
           <div className="space-y-4">
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
             <FaMobileAlt  className="w-6 h-6 text-primary" />
               <span className="text-gray-700 text-lg font-medium">
               <a href="tel:+251911576379" className="text-primary font-medium hover:underline">
               +251 911 576 379
             </a>
               </span>
-            </div>
+            </div> */}
             <div className="flex items-center space-x-4">
             <Phone className="w-6 h-6 text-primary" />
               <span className="text-gray-700 text-lg font-medium">

@@ -14,6 +14,14 @@ const Clients = () => {
             <SingleClient key={index} client={partner} />
           ))}
         </div>
+        <div  className="flex  flex-wrap items-center justify-center  my-6">
+          <h1 className="text-3xl font-bold text-gray-900">Medical Suppliers</h1>
+          
+        </div>
+        <div  className="flex  flex-wrap items-center justify-center  my-6">
+          
+          <h1 className="text-2xl">(Privet)</h1>
+        </div>
       </div>
       <hr className="mb-8 border-t border-gray-200" />
     </section>

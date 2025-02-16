@@ -6,7 +6,7 @@ const services = [
   {
     icon: <Pickaxe className="w-10 h-10 text-primary" />,
     title: "Mining",
-    description: "Responsible extraction and supply of essential minerals and resources.",
+    description: "Exploring Resource, Modeling, Mine planning and Exploitation mineral resources",
   },
   {
     icon: <Leaf className="w-10 h-10 text-primary" />, 

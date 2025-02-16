@@ -11,7 +11,7 @@ const Features = () => {
         <div>
           <p className="text-3xl font-semibold text-primary text-center">Our Key Industries</p>
           <p className="text-center text-gray-600 mt-2 lg:w-2/3 mx-auto">
-            We specialize in a wide range of Industries including pharmaceutical products, manufacturing, textile, agriculture, mining, and more. Our solutions are designed to optimize global trade and enhance sustainability across various industries.
+          We operate across diverse industries, including Mining, Farming, Export-import trade, medical supply, and manufacturing, among others. Our solutions are strategically designed to streamline global trade, drive innovation, and promote sustainability, ensuring long-term growth and efficiency in every sector we engage in.
           </p>
         </div>
         <div

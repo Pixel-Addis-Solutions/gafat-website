@@ -11,7 +11,7 @@ const featuresData = [
         <line x1="12" y1="22" x2="25" y2="22" stroke="white" stroke-width="2"/>
       </svg>
     ),
-    title: "Pharmaceutical",
+    title: "Medical Supply",
     paragraph: "Advanced medical devices and pharmaceuticals to improve healthcare accessibility and patient care.",
     btn: "Learn More",
     btnLink: "/products"
