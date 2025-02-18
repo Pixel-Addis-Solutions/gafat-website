@@ -1,5 +1,6 @@
-import { MapPin, Phone, Send } from "lucide-react";
-import { FaMobile, FaMobileAlt } from "react-icons/fa";
+import { Globe2Icon, MapPin, Phone, Send } from "lucide-react";
+import { AiOutlineWeiboSquare } from "react-icons/ai";
+import { FaGlobe, FaGlobeAmericas, FaMobile, FaMobileAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -29,6 +30,15 @@ const Contact = () => {
           </p>
         </div> */}
 
+            <div className="bg-gray-100 p-6 rounded-xl text-center shadow-md">
+          <FaGlobeAmericas className="text-primary mx-auto mb-3" size={40} />
+          <h3 className="text-xl font-semibold text-gray-900">E-mail</h3>
+          <p className="text-gray-600 mt-2">
+            <a href="mailto:info@eastgafat.com" className="text-primary font-medium hover:underline">
+            info@eastgafat.com
+            </a>
+          </p>
+        </div>
         
         <div className="bg-gray-100 p-6 rounded-xl text-center shadow-md">
           <Phone className="text-primary mx-auto mb-3" size={40} />

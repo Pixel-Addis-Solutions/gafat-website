@@ -1,5 +1,5 @@
 import { MapPin, Phone, Send } from "lucide-react";
-import { FaMobileAlt, FaWhatsapp } from "react-icons/fa";
+import { FaGlobeAmericas, FaMobileAlt, FaWhatsapp } from "react-icons/fa";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -44,6 +44,7 @@ const ContactPage = () => {
             </a>
               </span>
             </div> */}
+            
             <div className="flex items-center space-x-4">
             <Phone className="w-6 h-6 text-primary" />
               <span className="text-gray-700 text-lg font-medium">
@@ -72,6 +73,16 @@ const ContactPage = () => {
                 WhatsApp
               </a>
             </div>
+            <div className="flex items-center space-x-4">
+            <FaGlobeAmericas className="w-6 h-6 text-primary" />
+              <a
+                href="mailto:info@eastgafat.com"
+                className="text-primary text-lg font-medium hover:underline"
+              >
+                info@eastgafat.com
+              </a>
+            </div>
+
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-primary" />
               <span className="text-gray-700 text-lg font-medium">Addis Ababa, Ethiopia</span>
