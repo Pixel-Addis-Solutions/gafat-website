@@ -34,7 +34,7 @@ const About = () => {
               manufacturing, and export trade” backbones section of the
               business.
             </p>
-            <ul className="list-inside list-disc space-y-2">
+            <ul className="list-disc space-y-3">
               <li>
                 Mining, (EGEG). is operating resource exploration, evaluating
                 and exploitation, mainly Gold, Coal, Dimensional stone, Iron
@@ -65,7 +65,7 @@ const About = () => {
                 goods.
               </li>
             </ul>
-            <p className="mb-6 leading-relaxed">
+            <p className="my-6 leading-relaxed">
               With a commitment to excellence, sustainability, and innovation,
               East Gafat Engineering Group (EGEG), sectoral East Gafat Mining
               and Trading PLC continues to expand the investment sector to
