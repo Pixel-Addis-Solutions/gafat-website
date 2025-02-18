@@ -36,7 +36,7 @@ export default function Head() {
       <link rel="canonical" href="https://eastgafat.com" />
 
       {/* Favicon */}
-      <link rel="icon" href="/images/logo/logo.png" />
+      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }

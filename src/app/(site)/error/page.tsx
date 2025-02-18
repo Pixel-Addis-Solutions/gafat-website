@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "404 - Page Not Found | East Gafat Engineering Group",
+  icons: "/favicon.ico",
   description: "Oops! The page you're looking for doesn't exist. Return to the homepage or explore other services.",
   keywords: "404 error, page not found, East Gafat Engineering Group, website error",
   openGraph: {
