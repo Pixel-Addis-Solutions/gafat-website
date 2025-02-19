@@ -9,7 +9,7 @@ const SingleClient = ({ client }: { client: Partner }) => {
       <Link href={link} target="_blank" rel="nofollow noopner">
         <img
       
-          src={`https://api.alenafrica.org${image}`}
+          src={`https://api.eastgafat.com${image}`}
           alt={name}
           width={140}
           height={40}

@@ -16,7 +16,7 @@ const About = () => {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           
             <Image
-              src="/images/hero/who.jpg"
+              src="/images/about.jpg"
               alt="About Us"
               width={600}
               height={350}
@@ -78,21 +78,21 @@ const About = () => {
         {/* Commitment Section */}
         <div className="mt-20">
           <h2 className="mb-10 text-center text-3xl font-medium">
-            Our Commitment
+            Commitment
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {[
               {
-                title: "Our Mission",
-                text: "Driving sustainable development for stakeholders, client and customer satisfaction in delivering excellent provision across: Mining, Trading, Medical supply, Farming, and Manufacturing.  ",
+                title: "Mission",
+                text: "Driving sustainable development for client satisfaction in delivering excellent service",
               },
               {
-                title: "Our Vision",
+                title: "Vision",
                 text: "Leading innovation, global trade, and being practicable across multiple sectors.",
               },
               {
-                title: "Our Core Values",
-                text: "Integrity & Transparency: conducting the business with honesty, accountability, and ethical responsibility, ensuring trust in every partnership, client, and customer.",
+                title: "Core Values",
+                text: "Integrity & Transparency: conducting the business with  accountability, ensuring to client,",
               },
             ].map((item, index) => (
               <div

@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'api.alenafrica.org',
+        hostname: 'api.eastgafat.com',
         port: '9000',
         pathname: '/**',
       },

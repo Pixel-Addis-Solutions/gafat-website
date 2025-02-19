@@ -9,13 +9,13 @@ const Features = () => {
     <section className="pb-8 pt-8 lg:pb-10 lg:pt-8">
       <div className="container">
         <div>
-          <p className="text-3xl font-semibold text-primary text-center">Our Key Industries</p>
+          <p className="text-3xl font-semibold text-primary text-center"> Key Industries</p>
           <p className="text-center text-gray-600 mt-2 lg:w-2/3 mx-auto">
-          We operate across diverse industries, including Mining, Farming, Export-import trade, medical supply, and manufacturing, among others. Our solutions are strategically designed to streamline global trade, drive innovation, and promote sustainability, ensuring long-term growth and efficiency in every sector we engage in.
+          We operate across diverse industries, including: Mining, Farming, trade goods, medical supply, and manufacturing, among others. Our deliverance is strategically designed to rationalize global trade, drive innovation, and promote sustainability, ensuring long-term growth and efficiency in every sector we engage in.
           </p>
         </div>
         <div
-          className="-mx-4 mt-12 flex flex-wrap lg:mt-10"
+          className="-mx-4 justify-center mt-12 flex flex-wrap lg:mt-10"
         >
           {featuresData.map((feature, i) => (
             <SingleFeature key={i} feature={feature} />

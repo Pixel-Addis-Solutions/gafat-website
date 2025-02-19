@@ -14,11 +14,6 @@ const items = [
     subtitle: "Providing high-quality raw materials and minerals to global markets while ensuring responsible resource management." 
   },
   { 
-    image: "/images/hero/1.jpg", 
-    title: "Medical Supply", 
-    subtitle: "Delivering advanced medical technology and essential supplies to enhance healthcare services and improve patient care." 
-  },
-  { 
     image: "/images/hero/4.jpg", 
     title: "Farming", 
     subtitle: "Bringing premium farm produce to the world, supporting sustainable farming practices, and strengthening food systems." 
@@ -32,7 +27,12 @@ const items = [
     image: "/images/hero/2.jpg", 
     title: "Export & Import Trade", 
     subtitle: "Connecting quality products with international demand, optimizing logistics, and fostering strong economic partnerships." 
-  }
+  },
+  { 
+    image: "/images/hero/1.jpg", 
+    title: "Medical Supply", 
+    subtitle: "Delivering advanced medical technology and essential supplies to enhance healthcare services and improve patient care." 
+  },
 ];
 
 

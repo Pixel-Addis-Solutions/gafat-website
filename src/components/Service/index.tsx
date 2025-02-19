@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useGetServicesQuery } from "@/store/app-api";
 import { Building, Factory, Globe, Hammer, Leaf, Package, Pickaxe, ShieldCheck, Star, Truck } from "lucide-react";
 const services = [
+
   {
     icon: <Pickaxe className="w-10 h-10 text-primary" />,
     title: "Mining",
@@ -10,12 +11,22 @@ const services = [
   },
   {
     icon: <Leaf className="w-10 h-10 text-primary" />, 
-    title: "Agriculture",
+    title: "Farming",
     description: "Sustainable sourcing and distribution of agricultural products to global markets.",
   },
   {
+    icon: <Factory className="w-10 h-10 text-primary" />,
+    title: "Manufacturing",
+    description: "Innovative manufacturing solutions, including textile production for various industries.",
+  },
+  {
+    icon: <Hammer className="w-10 h-10 text-primary" />,
+    title: "Construction Materials",
+    description: "Supplying high-quality marble, granite, paint, and other construction essentials.",
+  },
+  {
     icon: <Globe className="w-10 h-10 text-primary" />,
-    title: "Export",
+    title: "Export & Import Trade",
     description: "Global export of high-quality products across various industries.",
   },
   {
@@ -24,18 +35,8 @@ const services = [
     description: "We provide high-quality medical products and equipment from trusted global suppliers.",
   },
   
-
-  {
-    icon: <Factory className="w-10 h-10 text-primary" />,
-    title: "Manufacturing & Textile",
-    description: "Innovative manufacturing solutions, including textile production for various industries.",
-  },
  
-  {
-    icon: <Hammer className="w-10 h-10 text-primary" />,
-    title: "Construction Materials",
-    description: "Supplying high-quality marble, granite, paint, and other construction essentials.",
-  },
+  
  
 ];
 
@@ -53,10 +54,11 @@ const Service = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h2 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#B8860B]">
-            Our Services
+          Facilities
           </h2>
           <p className="text-base text-gray-400 max-w-lg mx-auto mt-3">
-          Premium solutions across pharmaceuticals, healthcare, manufacturing, agriculture, and more, ensuring excellence in distribution, sustainability, and industry compliance.
+          We mine valuables, we supply healthies, we farm organics, we manufacture soften &amp; asset imputes,
+and, we trade all to the globe.
           </p>
         </motion.div>
 

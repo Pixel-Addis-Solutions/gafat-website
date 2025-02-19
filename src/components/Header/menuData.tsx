@@ -27,10 +27,16 @@ const menuData: Menu[] = [
   },
   {
     id: 5,
-    title: "News",
-    path: "/#",
+    title: "Partners",
+    path: "/Partners",
     newTab: false,
   },
+  // {
+  //   id: 5,
+  //   title: "News",
+  //   path: "/#",
+  //   newTab: false,
+  // },
   {
     id: 6,
     title: "Contact",

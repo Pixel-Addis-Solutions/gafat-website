@@ -1,9 +1,12 @@
 "use client";
 import { useGetCategoryQuery, useGetProductsQuery } from "@/store/app-api";
 import { useState, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const PRODUCTS_PER_PAGE = 8;
-const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "https://api.alenafrica.org";
+const BASE_URL = process.env.NEXT_PUBLIC_IMAGE_BASE_URL || "https://api.eastgafat.com";
 
 interface Subcategory {
   id: number;
@@ -66,6 +69,22 @@ const Products = () => {
     setSelectedProduct(null);
   };
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
+  const sliderImages = [
+    "/images/gem.jpg",
+    "/images/med.jpg",
+    "/images/paint.jpg",
+  ];
+
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching products</div>;
 
@@ -92,47 +111,62 @@ const Products = () => {
           ))}
         </div>
 
-        {selectedCategory && selectedCategory.subcategory.length > 0 && (
-          <div className="mt-4 flex justify-center space-x-4">
-            {selectedCategory.subcategory.map((subcategory, index) => (
-              <button
-                key={subcategory.id}
-                className={`px-4 py-2 rounded-lg transition duration-300 ${
-                  selectedSubcategory?.id === subcategory.id
-                    ? "bg-yellow-500 text-white"
-                    : "bg-yellow-100 text-gray-800"
-                }`}
-                onClick={() => {
-                  setSelectedSubcategory(subcategory);
-                  setCurrentPage(1);
-                }}
-              >
-                {subcategory.name}
-              </button>
-            ))}
+        {/* Show sliding images if no category is selected */}
+        {selectedCategory === null ? (
+          <div className="mt-10">
+            <Slider {...sliderSettings}>
+              {sliderImages.map((img, index) => (
+                <div key={index}>
+                  <img src={img} alt={`Slide ${index + 1}`} className="w-full h-96 object-cover rounded-md" />
+                </div>
+              ))}
+            </Slider>
           </div>
+        ) : (
+          <>
+            {selectedCategory.subcategory.length > 0 && (
+              <div className="mt-4 flex justify-center space-x-4">
+                {selectedCategory.subcategory.map((subcategory) => (
+                  <button
+                    key={subcategory.id}
+                    className={`px-4 py-2 rounded-lg transition duration-300 ${
+                      selectedSubcategory?.id === subcategory.id
+                        ? "bg-yellow-500 text-white"
+                        : "bg-yellow-100 text-gray-800"
+                    }`}
+                    onClick={() => {
+                      setSelectedSubcategory(subcategory);
+                      setCurrentPage(1);
+                    }}
+                  >
+                    {subcategory.name}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {displayedProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer"
+                  onClick={() => openModal(product)}
+                >
+                  <div className="flex justify-center">
+                    <img
+                      src={`${BASE_URL}${product.image}`}
+                      alt={product.name}
+                      className="w-full h-48 object-cover rounded-md"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
+                </div>
+              ))}
+            </div>
+          </>
         )}
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {displayedProducts.map((product) => (
-            <div
-              key={product.id}
-              className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 cursor-pointer"
-              onClick={() => openModal(product)}
-            >
-              <div className="flex justify-center">
-                <img
-                  src={`${BASE_URL}${product.image}`}
-                  alt={product.name}
-                  className="w-full h-48 object-cover rounded-md"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
-            </div>
-          ))}
-        </div>
-
-        {totalPages > 1 && (
+        {totalPages > 1 && selectedCategory && (
           <div className="mt-8 flex justify-center space-x-4">
             <button
               className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg"
@@ -158,10 +192,7 @@ const Products = () => {
           <div className="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
-              <button
-                className="text-gray-600 hover:text-gray-800"
-                onClick={closeModal}
-              >
+              <button className="text-gray-600 hover:text-gray-800" onClick={closeModal}>
                 &times;
               </button>
             </div>

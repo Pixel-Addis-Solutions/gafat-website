@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const appApi = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://api.alenafrica.org" }), // Change this to your API
+  baseQuery: fetchBaseQuery({ baseUrl: "https://api.eastgafat.com" }), // Change this to your API
   endpoints: (builder) => ({
     getClients: builder.query({
       query: () => "/clients", // Update this endpoint as needed
