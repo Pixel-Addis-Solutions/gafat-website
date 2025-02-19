@@ -28,7 +28,7 @@ const ContactPage = () => {
     <section className="pb-12 px-6 max-w-6xl mx-auto pt-[120px] md:pt-[130px] lg:pt-[130px] pb-4 lg:pb-8">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900">Get in Touch</h2>
-        <p className="text-lg text-gray-600 mt-3">We’re here to assist you. Reach out anytime.</p>
+        <p className="text-lg text-gray-600 mt-3"></p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
