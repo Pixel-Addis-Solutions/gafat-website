@@ -28,7 +28,7 @@ const AboutPage = () => {
   return (
     <main>
       <About />
-      <Clients/>
+      {/* <Clients/> */}
     </main>
   );
 };
